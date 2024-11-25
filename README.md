@@ -73,7 +73,7 @@ Allows users to keep track and store their wagers, along with odds, cost, and pr
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Add picture of your hand sketched wireframes in this section] <img src="https://i.ibb.co/m6Cc7n6/IMG-0112.jpg" width=600>
 
 <br>
 
