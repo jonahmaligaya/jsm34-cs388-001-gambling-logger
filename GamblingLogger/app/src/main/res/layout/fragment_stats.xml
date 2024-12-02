@@ -42,6 +42,36 @@
             app:layout_constraintStart_toEndOf="@+id/total_profit_or_loss_label"
             app:layout_constraintTop_toTopOf="@id/total_profit_or_loss_label" />
 
+        <TextView
+            android:id="@+id/win_loss_ratio_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Win-Loss Ratio: "
+            android:textAlignment="textEnd"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.273"
+            app:layout_constraintStart_toStartOf="@+id/constFrameDashboard"
+            app:layout_constraintTop_toTopOf="@+id/constFrameDashboard"
+            app:layout_constraintVertical_bias="0.118" />
+
+        <TextView
+            android:id="@+id/win_loss_ratio_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="0 - 0"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/win_loss_ratio_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/win_loss_ratio_label"
+            app:layout_constraintTop_toTopOf="@id/win_loss_ratio_label" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,7 +18,11 @@ interface WagerDao {
     @Query("SELECT sum(profitOrLoss) FROM wager_table")
     fun totalProfitOrLoss() : String
 
+    @Query("SELECT COUNT(*) FROM wager_table WHERE profitOrLoss > 0")
+    fun wins() : Int
 
+    @Query("SELECT COUNT(*) FROM wager_table WHERE profitOrLoss < 0")
+    fun losses() : Int
 
     @Query("DELETE FROM wager_table")
     fun deleteAll()

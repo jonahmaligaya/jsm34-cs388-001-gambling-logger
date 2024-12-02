@@ -20,6 +20,10 @@ class StatsFragment : Fragment() {
         lifecycleScope.launch(Dispatchers.IO) {
             var  totalProfit = (activity?.application as GamblingLoggerApp).db.wagerDao().totalProfitOrLoss()
             view.findViewById<TextView?>(R.id.total_profit_or_loss_amount_value).text = "$" + totalProfit
+
+            var wins = (activity?.application as GamblingLoggerApp).db.wagerDao().wins()
+            var losses = (activity?.application as GamblingLoggerApp).db.wagerDao().losses()
+            view.findViewById<TextView?>(R.id.win_loss_ratio_value).text = wins.toString() + " - " + losses.toString()
         }
 
         return view
