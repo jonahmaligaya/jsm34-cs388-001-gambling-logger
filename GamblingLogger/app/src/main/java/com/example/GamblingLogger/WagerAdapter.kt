@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
@@ -51,6 +52,7 @@ class WagerAdapter(
                 val shared_text = "Hi friend! I placed a bet on " + wagerItem.wagerTitle + " with the odds of " + wagerItem.wagerOdds + " and made " + wagerItem.profitOrLoss + "!"
                 val clip = ClipData.newPlainText("label", shared_text)
                 clipboard.setPrimaryClip(clip)
+                Toast.makeText(context, "A bet has been copied to your clipboard! Share it with a friend!", Toast.LENGTH_LONG).show()
             }
         }
     }
