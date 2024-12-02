@@ -1,5 +1,7 @@
 package com.example.GamblingLogger
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -35,6 +37,7 @@ class WagerAdapter(
         private val wagerOdds = itemView.findViewById<TextView>(R.id.wager_odds)
         private val wagerTitle = itemView.findViewById<TextView>(R.id.wager_title)
         private val buttonDeleteWager: Button = itemView.findViewById(R.id.delete_wager_button)
+        private val buttonShareWager: Button = itemView.findViewById(R.id.share_wager_button)
 
         fun bind(wagerItem: Wager) {
             wagerProfitOrLoss.text = wagerItem.profitOrLoss
@@ -42,6 +45,12 @@ class WagerAdapter(
             wagerTitle.text = wagerItem.wagerTitle
             buttonDeleteWager.setOnClickListener() {
                 deleteWager(wagerItem.wagerTitle)
+            }
+            buttonShareWager.setOnClickListener() {
+                val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val shared_text = "Hi friend! I placed a bet on " + wagerItem.wagerTitle + " with the odds of " + wagerItem.wagerOdds + " and made " + wagerItem.profitOrLoss + "!"
+                val clip = ClipData.newPlainText("label", shared_text)
+                clipboard.setPrimaryClip(clip)
             }
         }
     }
