@@ -26,4 +26,7 @@ interface WagerDao {
 
     @Query("DELETE FROM wager_table")
     fun deleteAll()
+
+    @Query("DELETE FROM wager_table WHERE wagerTitle = :title")
+    fun deleteWager(title: String)
 }

@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +43,8 @@ class MainActivity : AppCompatActivity() {
             fragmentManager.beginTransaction().replace(R.id.wager_frame_layout, fragment).commit()
             true
         }
+
+
 
         // Set default selection
         bottomNavigationView.selectedItemId = R.id.action_home

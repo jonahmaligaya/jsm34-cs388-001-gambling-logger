@@ -4,13 +4,17 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.launch
 
 
 class WagerAdapter(
     private val context: Context,
-    private val wager: MutableList<Wager>) : RecyclerView.Adapter<WagerAdapter.ViewHolder>() {
+    private val wager: MutableList<Wager>,
+    private val deleteWager: (String) -> Unit) : RecyclerView.Adapter<WagerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.wager_fragment, parent, false)
@@ -30,11 +34,15 @@ class WagerAdapter(
         private val wagerProfitOrLoss = itemView.findViewById<TextView>(R.id.wager_profit_or_loss)
         private val wagerOdds = itemView.findViewById<TextView>(R.id.wager_odds)
         private val wagerTitle = itemView.findViewById<TextView>(R.id.wager_title)
+        private val buttonDeleteWager: Button = itemView.findViewById(R.id.delete_wager_button)
 
         fun bind(wagerItem: Wager) {
             wagerProfitOrLoss.text = wagerItem.profitOrLoss
             wagerOdds.text = wagerItem.wagerOdds
             wagerTitle.text = wagerItem.wagerTitle
+            buttonDeleteWager.setOnClickListener() {
+                deleteWager(wagerItem.wagerTitle)
+            }
         }
     }
 }

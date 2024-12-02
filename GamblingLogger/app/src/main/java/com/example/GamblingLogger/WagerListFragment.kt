@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
@@ -33,7 +34,7 @@ class WagerListFragment : Fragment() {
         val layoutManager = LinearLayoutManager(context)
         wagerRecyclerView = view.findViewById(R.id.wager_recycler_view)
         wagerRecyclerView.setHasFixedSize(true)
-        wagerAdapter = WagerAdapter(view.context, wager)
+        wagerAdapter = WagerAdapter(view.context, wager) {wagerTitle -> deleteWager(wagerTitle)}
 
         lifecycleScope.launch {
             (activity?.application as GamblingLoggerApp).db.wagerDao().getAll().collect { databaseList ->
@@ -61,7 +62,11 @@ class WagerListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
-
+    private fun deleteWager(title: String) {
+        lifecycleScope.launch(Dispatchers.IO) {
+            (activity?.application as GamblingLoggerApp).db.wagerDao().deleteWager(title)
+        }
+    }
     companion object {
         fun newInstance(): WagerListFragment{
             return WagerListFragment()
