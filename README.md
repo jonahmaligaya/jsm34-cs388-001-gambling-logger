@@ -100,8 +100,10 @@ this section]
 
 ## Issues worked on this sprint
 
-- List the issues you completed this sprint
-- [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+- Allows users to see analytics such as averages, etc.
+- Allows users to store wagers (cost, odds, profit/loss, title)
+- [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.](https://github.com/user-attachments/assets/567ee3c1-6095-4f56-b1bf-7415d4cb9c0e)
+
 
 <br>
 
