@@ -124,7 +124,7 @@ this section]
 - Allow users to see win/loss ratio.
 
 [Add video/gif of your current application that shows build progress]
-<img src="[YOUR_WIREFRAME_IMAGE_URL](https://github.com/user-attachments/assets/337849d9-0f4e-457f-a879-79e6306ff904)" width=600>
+<img src="https://i.imgur.com/BVwEzyt.gif" width=600>
 
 ## App Demo Video
 
