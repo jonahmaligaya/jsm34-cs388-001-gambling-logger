@@ -20,6 +20,37 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
+        val buttonLight: Button = findViewById<Button>(R.id.button_light)
+        val buttonDark: Button = findViewById<Button>(R.id.button_dark)
+
+
+        val PREFS_NAME = "ThemePrefs"
+        val PREFS_KEY_THEME = "Theme_Default"
+
+        val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        val selectedTheme = sharedPreferences.getInt(PREFS_KEY_THEME, R.style.Theme_Default)
+
+        // Apply the selected theme before setting the content view
+        setTheme(selectedTheme)
+
+        buttonLight.setOnClickListener { v ->
+            val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putInt(PREFS_KEY_THEME, R.style.Theme_Default)
+            editor.apply()
+            recreate()
+        }
+        buttonDark.setOnClickListener { v ->
+            val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putInt(PREFS_KEY_THEME, R.style.Theme_Dark)
+            editor.apply()
+            recreate()
+        }
+
+
+
         val fragmentManager: FragmentManager = supportFragmentManager
 
         // define your fragments here

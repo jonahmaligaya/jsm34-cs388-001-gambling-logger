@@ -17,7 +17,9 @@
             android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
+
+        </FrameLayout>
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,8 +27,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:menu="@menu/bottom_navigation_view" />
-    </RelativeLayout>
+            app:menu="@menu/bottom_navigation_view" >
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+    </RelativeLayout>
+    <Button
+        android:id="@+id/button_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Light Theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
+
+    <Button
+        android:id="@+id/button_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Dark Theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

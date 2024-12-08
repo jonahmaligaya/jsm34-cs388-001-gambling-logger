@@ -3,20 +3,20 @@ package com.example.GamblingLogger
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 private const val TAG = "StatsFragment"
 class StatsFragment : Fragment() {
@@ -63,6 +63,7 @@ class StatsFragment : Fragment() {
 
                 }
             }
+
         }
 
         return view

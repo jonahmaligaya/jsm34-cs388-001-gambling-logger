@@ -23,6 +23,7 @@ class WagerDetailActivity : AppCompatActivity() {
         wagerOddsInput = findViewById(R.id.enter_odds)
         wagerTitleInput = findViewById(R.id.enter_title)
 
+
         findViewById<Button>(R.id.add_wager_button_detail).setOnClickListener{
             val newWagerEntity = Wager(
                 wagerProfitOrLossInput.text.toString(),
