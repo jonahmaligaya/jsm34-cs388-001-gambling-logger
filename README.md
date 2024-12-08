@@ -112,16 +112,19 @@ this section]
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="https://github.com/user-attachments/assets/6d7b0740-3b3c-4f00-8813-cf48ff57db08" width=600>
+
 
 ## Completed user stories
 
-- List the completed user stories from this unit
-- List any pending user stories / any user stories you decided to cut
-from the original requirements
+- Allows users to delete wagers.
+- Allows users to see analytics such as averages, etc.
+- Allows users to share wagers.
+- Allows users to pick an app theme.
+- Allow users to see win/loss ratio.
 
 [Add video/gif of your current application that shows build progress]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="[YOUR_WIREFRAME_IMAGE_URL](https://github.com/user-attachments/assets/337849d9-0f4e-457f-a879-79e6306ff904)" width=600>
 
 ## App Demo Video
 
